@@ -75,4 +75,16 @@ public:
         return true;
     }
 
-    
+    void traverse() {
+        if (listEmpty()) {
+            cout << "List Kosong" << endl;
+            return;
+        }
+        Node *currentNode = START;
+        while (currentNode != NULL) {
+            cout << currentNode->nim << " " << currentNode->nama << endl;
+            currentNode = currentNode->next;
+        }
+        cout << endl;
+    }
+};
