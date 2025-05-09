@@ -125,4 +125,25 @@ int main() {
             break;
 
         
+            case '3':
+            mhs.traverse();
+            break;
+
+        case '4':
+            cout << "Masukkan nim mahasiswa yang dicari : ";
+            cin >> nim;
+
+            Node *previous, *current;
+            if (mhs.search(nim, previous, current) == false)
+                cout << "Data tidak ditemukan!" << endl;
+            else
+                cout << "Nim Mahasiswa : " << current->nim << " " << current->nama << endl;
+            break;
+
+        case '5':
+            break;
+
+        
+
+
   
