@@ -51,4 +51,14 @@ public:
         return (START == NULL);
     }
 
-    
+    bool search(int nim, Node *previous, Node *&current) {
+        previous = START;
+        current = START;
+        while (current != NULL && (nim != current->nim)) {
+            previous = current;
+            current = current->next;
+        }
+        return (current != NULL);
+    }
+
+   
